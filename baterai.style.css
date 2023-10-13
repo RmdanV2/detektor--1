@@ -1,0 +1,735 @@
+@media screen and (max-width: 767px) {
+
+html, body {
+scroll-behavior: smooth;
+-ms-scroll-behavior: smooth;
+-webkit-scroll-behavior: smooth;
+}
+
+html, body, footer, div, span, p, a, label, button {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-rendering: optimizeLegibility;
+}
+
+body {
+margin: 0px;
+padding: 0px;
+/*background-image: url("wal.gif");*/
+background-color: rgb(0,0,0);
+background-color: #303030;
+background-size: cover;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+/*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+background: -webkit-linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+background-size: 400% 400%;
+animation: gradient 15s ease infinite;
+-ms-animation: gradient 15s ease infinite;
+-webkit-animation: gradient 15s ease infinite;*/
+height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#loader-wrapper p {
+font-size: 14px;
+font-weight: 600;
+font-family: "Raleway";
+color: #FFF;
+}
+
+#spanmood {
+dispaly: block;
+position: fixed;
+left: 3.5%;
+top: 4%;
+z-index: 1000;
+width: auto;
+padding: 4px 4px 0px 4px;
+font-size: 16px;
+font-weight: 600;
+font-family: 'Mitr';
+color: #EEE;
+background-color: rgba(0,0,0,0.2);
+border: 1.5px solid #FFF;
+border-radius: 4px 16px 16px 4px;
+}
+
+#peringatan, #pengisian {
+top: 0px;
+left: 0px;
+visibility: visible;
+position: fixed;
+width: 95%;
+margin: 0px;
+padding: 2px 0px;
+padding-left: 10px;
+padding-right: 10px;
+font-size: 16px;
+font-weight: 400;
+font-family: "Sen";
+color: #FFC107;
+background-color: rgba(0,0,0,0.6);
+z-index: 200;
+}
+
+#pengisian {
+top: auto !important;
+bottom: 0px;
+visibility: hidden;
+font-size: 18px;
+font-weight: 600;
+text-align: center;
+color: #DDD;
+background-color: #41ADFF;
+box-shadow: 0px 0px 8px 2px #1799E7;
+-ms-box-shadow: 0px 0px 8px 2px #1799E7;
+-webkit-box-shadow: 0px 0px 8px 2px #1799E7;
+}
+
+#batCanvas {
+position: absolute;
+top: 12%;
+left: 50%;
+width: 100%;
+margin: 0px;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+background-color: rgba(0,0,0,0.0);
+}
+
+#BatteryLevel {
+display: block;
+position: absolute;
+top: 16%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+font-size: 28px;
+font-weight: 400;
+font-family: "Orbitron";
+color: #FFF;
+}
+
+/*#bolt {
+position: absolute;
+top: 15%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+}*/
+
+#petir {
+position: absolute;
+top: 16.5%;
+left: 65%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+font-size: 30px;
+font-weight: 400;
+color: #FFF;
+}
+
+/* #status, #mengisi */
+.stat {
+position: absolute;
+top: 21%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+}
+
+.stat p {
+margin: 0px;
+padding: 0px;
+text-align: center;
+font-size: 16px;
+font-weight: 400;
+font-family: "Exo 2";
+color: #FFF;
+}
+
+/*
+#titit, #penuh {
+position: absolute;
+top: 60%;
+left: 50%;
+transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+padding: 4px 4px;
+font-size: 16px;
+color: #DDD;
+background-color: rgba(0,0,0,0.4);
+border-radius: 4px;
+}
+*/
+
+/**/
+
+.data {
+display: block;
+width: 92%;
+margin: 0px auto;
+margin-top: 15px;
+padding-bottom: 4px;
+background-color: rgba(0,0,0,0.6);
+background-color: #181818;
+border-radius: 25px 8px 25px 8px;
+border: 1.5px solid #FFF;
+}
+
+.data .label {
+display: block;
+width: 60%;
+margin: 0px auto;
+margin-bottom: 15px;
+padding: 2px 0px;
+text-align: center;
+font-size: 18px;
+font-weight: 600;
+font-family: "Raleway";
+color: #111;
+background-color: #DDD; /*1799E7*/
+border-left: 2px solid #FFF;
+border-right: 2px solid #FFF;
+border-bottom: 2px solid #FFF;
+border-radius: 0px 0px 18px 18px;
+}
+
+.data p {
+margin: 4px 4px;
+font-size: 16px;
+font-weight: 400;
+font-family: "Prompt";
+color: #DDD;
+}
+
+.data p span {
+font-size: 16px;
+font-weight: 500;
+font-family: "Prompt";
+color: #DDD;
+}
+
+.data p .material-icons, .material-icons {
+vertical-align: middle ;
+width: 20px ;
+margin-top: -3.0px ;
+padding: 4px 10px 4px 6px ;
+font-size: 24px ;
+color: #FFF;
+}
+
+.data p .fa-spinner, i.fa, #suhu i, #tegangan i {
+width: auto ;
+margin-top: -1.5px ;
+padding: 0px ;
+font-size: 16px ;
+}
+
+.data .titletips {
+font-size: 18px;
+font-weight: 600;
+font-family: "Sen";
+color: #DDD;
+}
+
+.data .tips {
+margin: 8px 8px;
+font-size: 16px;
+font-weight: 400;
+font-family: "Prompt";
+color: #EEE;
+}
+
+/**/
+
+.namaFitur .material-icons, #murni .material-icons, .material-symbols-outlined {
+vertical-align: middle ;
+margin-top: -3.5px ;
+padding: 0px ;
+font-size: 24px ;
+color: #FFF ;
+}
+
+.namaFitur {
+margin: 0px;
+padding: 2px 10px 2px 2px;
+font-size: 16px;
+font-weight: 400;
+font-family: "Mitr";
+color: #DDD;
+background-color: #1799E7;
+border-radius: 0px 4px 16px 0px;
+}
+
+.namaFitur p {
+margin: 0px;
+padding: 0px;
+}
+
+.switch {
+display: block;
+position: absolute;
+right: 8%;
+width: 60px;
+height: 28px;
+margin-top: -26px;
+}
+
+.switch input { 
+width: 0%;
+height: 0%;
+opacity: 0;
+-ms-opacity: 0;
+-webkit-opacity: 0;
+outline: none;
+}
+
+.slider {
+top: 0px;
+left: 0px;
+right: 0px;
+bottom: 0px;
+position: absolute;
+background-color: rgba(0,0,0,0.3);
+border: 1px solid #FFF;
+transition: 1s;
+-ms-transition: 1s;
+-webkit-transition: 1s;
+}
+
+.slider:before {
+content: "";
+left: 3px;
+bottom: 2px;
+position: absolute;
+width: 22px;
+height: 22px;
+background-color: #DDD;
+transition: 1s;
+-ms-transition: 1s;
+-webkit-transition: 1s;
+}
+
+.slider.round {
+border-radius: 25px;
+outline: none;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+input:checked + .slider {
+background-color: dodgerblue;
+}
+
+input:focus + .slider {
+}
+
+input:checked + .slider:before {
+transform: translateX(30px);
+-ms-transform: translateX(30px);
+-webkit-transform: translateX(30px);
+}
+
+/**/
+
+#persentase { /* Garis */
+visibility: hidden;
+position: fixed;
+bottom: 0px;
+left: 0px;
+right: 0px;
+width: 0px;
+margin: 0px;
+padding-top: 2px;
+padding-bottom: 2px;
+background: #FF9900;
+border-radius: 0px;
+z-index: 900;
+shadow: 0px 0px 8px 1px #FFB109;
+-ms-box-shadow: 0px 0px 8px 1px #FFB109;
+-webkit-box-shadow: 0px 0px 8px 1px #FFB109;
+}
+
+#proses, #hasil {
+margin: 8px 8px;
+text-align: center;
+font-size: 18px;
+font-weight: 400;
+font-family: "Alata";
+color: #DDD;
+animation: fadein 8s;
+-ms-animation: fadein 8s;
+-webkit-animation: fadein 8s;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#hasil {
+margin-top: -6px;
+animation-name: blinker;
+-ms-animation-name: blinker;
+-webkit-animation-name: blinker;
+animation-duration: 4s;
+-ms-animation-duration: 4s;
+-webkit-animation-duration: 4s;
+animation-timing-function: linear;
+-ms-animation-timing-function: linear;
+-webkit-animation-timing-function: linear;
+animation-iteration-count: infinite;
+-ms-animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+}
+
+@keyframes blinker {
+    20% {
+        color: #57F287;
+    }
+    40% {
+        color: #FF9900;
+    }
+    60% {
+        color: #FFE417;
+    }
+    80% {
+    	color: #E31937;
+    }
+}
+
+@-webkit-keyframes blinker {
+    20% {
+        color: #57F287;
+    }
+    40% {
+        color: #FF9900;
+    }
+    60% {
+        color: #FFE417;
+    }
+    80% {
+    	color: #E31937;
+    }
+}
+
+/**/
+
+.fa-thermometer-0 {
+color: #1799E7;
+}
+.fa-thermometer-1 {
+color: #25D366;
+}
+.fa-thermometer-2 {
+color: #FFB109;
+}
+.fa-thermometer-3 {
+color: #FF7034;
+}
+.fa-thermometer-4 {
+color: #FF033E;
+}
+
+/**/
+
+footer {
+display: block;
+margin-top: 25px;
+padding: 10px 10px;
+text-align: center;
+background-color: #181818;
+}
+
+footer p {
+margin: 10px 10px;
+font-size: 18px ;
+font-weight: 400;
+font-family: "Cabin Sketch";
+color: #EEE;
+}
+
+footer bdo a {
+font-size: 16px ;
+font-weight: 400;
+font-family: "Oxanium";
+color: #EEE;
+text-decoration: none;
+}
+
+footer a {
+margin: 8px 8px ;
+font-size: 26px ;
+color: #F9FAF8;
+}
+
+footer sup, footer sub {
+color: #DDD;
+font-weight: 400;
+font-family: "Scada";
+}
+
+footer sup {
+
+}
+
+.fa-facebook, .fa-whatsapp {
+
+}
+
+/**/
+
+.atas, .bawah {
+position: absolute;
+padding: 6px 6px;
+font-size: 18px;
+color: #DDD;
+background-color: rgba(0,0,0,0.4);
+border-radius: 50%;
+border: 1px solid #DDD;
+text-decoration: none;
+}
+
+.atas {
+bottom: -150%;
+right: 2%;
+}
+
+.bawah {
+top: 14%;
+right: 2%;
+}
+
+/**/
+
+#nprogress .bar {
+left: 0px;
+right: 0px;
+bottom: 0px;
+width: 100%;
+height: 4px;
+position: fixed;
+z-index: 10;
+background: #27C4F5 linear-gradient(to right, #27C4F5, #A307BA, #FD8D32, #70C050, #27C4F5);
+background: #27C4F5 -o-linear-gradient(to right, #27C4F5, #A307BA, #FD8D32, #70C050, #27C4F5);
+background: #27C4F5 -ms-linear-gradient(to right, #27C4F5, #A307BA, #FD8D32, #70C050, #27C4F5);
+background: #27C4F5 -webkit-linear-gradient(to right, #27C4F5, #A307BA, #FD8D32, #70C050, #27C4F5);
+background-size: 500%;
+animation: 2s linear infinite barprogress, .3s fadein;
+-o-animation: 2s linear infinite barprogress, .3s fadein;
+-ms-animation: 2s linear infinite barprogress, .3s fadein;
+-webkit-animation: 2s linear infinite barprogress, .3s fadein;
+}
+
+@keyframes barprogress {
+0% {background-position: 0% 0;}
+to {background-position: 125% 0;}
+}
+
+@-o-keyframes barprogress {
+0% {background-position: 0% 0;}
+to {background-position: 125% 0;}
+}
+
+@-ms-keyframes barprogress {
+0% {background-position: 0% 0;}
+to {background-position: 125% 0;}
+}
+
+@-webkit-keyframes barprogress {
+0% {background-position: 0% 0;}
+to {background-position: 125% 0;}
+}
+
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+.progress {
+  height: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.progress-bar {
+  float: left;
+  width: 0%;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #DDD;
+  text-align: center;
+  background-color: #337ab7;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: width 0.6s ease;
+  -o-transition: width 0.6s ease;
+  transition: width 0.6s ease;
+}
+.progress-striped .progress-bar,
+.progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  -webkit-background-size: 40px 40px;
+  background-size: 40px 40px;
+}
+.progress.active .progress-bar,
+.progress-bar.active {
+  -webkit-animation: progress-bar-stripes 2s linear infinite;
+  -o-animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
+}
+.progress-bar-success {
+  background-color: #5cb85c;
+}
+.progress-striped .progress-bar-success {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-info {
+  background-color: #5bc0de;
+}
+.progress-striped .progress-bar-info {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-warning {
+  background-color: #f0ad4e;
+}
+.progress-striped .progress-bar-warning {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+.progress-bar-danger {
+  background-color: #d9534f;
+}
+.progress-striped .progress-bar-danger {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+}
+
+/*
+.fa-battery-3 {
+margin-left: -3px ;
+margin-right: 3.1px ;
+}
+.fa-tachometer {
+margin-left: -1.2px ;
+margin-right: 2.6px ;
+}
+.fa-star {
+margin-left: -0.4px ;
+margin-right: 1.8px ;
+}
+.fa-thermometer-2 {
+margin-left: 3.8px ;
+margin-right: -3.1px ;
+}
+.fa-leaf {
+margin-left: -1.4px ;
+margin-right: 2.8px ;
+}
+*/
+/*
+.fa-mobile-phone {
+font-size: 30px ;
+margin-left: 2.5px ;
+margin-right: -2.3px ;
+}
+.fa-heart {
+margin-left: -0.8px ;
+margin-right: 1px ;
+}
+.fa-microchip {
+margin-left: 0.2px ;
+margin-right: -0.1px ;
+}
+.fa-android {
+margin-left: 1px ;
+margin-right: 0.3px ;
+}
+.fa-terminal {
+margin-left: -0.8px ;
+margin-right: 2.3px ;
+}
+.fa-sitemap {
+margin-left: -1px ;
+margin-right: 1.2px ;
+}
+*/
